@@ -18,6 +18,20 @@ class PhotoGridItem extends StatelessWidget {
         child: Image.network(
           photo.imageUrl,
           fit: BoxFit.cover,
+          loadingBuilder: (context, child, loadingProgress) {
+            if (loadingProgress == null) {
+              return child;
+            } else {
+              return Center(
+                child: CircularProgressIndicator(
+                  value: loadingProgress.expectedTotalBytes != null
+                      ? loadingProgress.cumulativeBytesLoaded /
+                          (loadingProgress.expectedTotalBytes ?? 1)
+                      : null,
+                ),
+              );
+            }
+          },
         ),
       ),
     );
