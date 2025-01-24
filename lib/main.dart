@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  // Light Theme
   ThemeData _buildLightTheme() {
     return ThemeData(
       brightness: Brightness.light,
@@ -32,7 +31,6 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  // Dark Theme
   ThemeData _buildDarkTheme() {
     return ThemeData(
       brightness: Brightness.dark,
