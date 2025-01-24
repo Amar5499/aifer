@@ -43,7 +43,10 @@ class PhotoDetailView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Photo Details')),
+      appBar: AppBar(
+        title: const Text('Photo Details'),
+        centerTitle: true,
+      ),
       body: Column(
         children: [
           Expanded(

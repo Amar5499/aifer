@@ -9,7 +9,10 @@ class HomeView extends ConsumerWidget {
     final photosAsync = ref.watch(photoProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Text('Wallpaper App')),
+      appBar: AppBar(
+        title: const Text('Aifer Wallpaper App'),
+        centerTitle: true,
+      ),
       body: photosAsync.when(
         data: (photos) => NotificationListener<ScrollNotification>(
           onNotification: (scrollNotification) {
